@@ -1,15 +1,11 @@
 namespace Blog.Migrations
 {
-    using Microsoft.AspNet.Identity;
-    using Microsoft.AspNet.Identity.EntityFramework;
-    using Models;
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
- 
 
-    public sealed class Configuration : DbMigrationsConfiguration<BlogDbContext>
+    public sealed class Configuration : DbMigrationsConfiguration<Blog.Models.BlogDbContext>
     {
         public Configuration()
         {
@@ -17,7 +13,7 @@ namespace Blog.Migrations
             AutomaticMigrationDataLossAllowed = true;
         }
 
-        protected override void Seed(BlogDbContext context)
+        protected override void Seed(Blog.Models.BlogDbContext context)
         {
             //  This method will be called after migrating to the latest version.
 

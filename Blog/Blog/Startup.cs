@@ -1,7 +1,7 @@
-﻿using Blog.Migrations;
-using Blog.Models;
-using Microsoft.Owin;
+﻿using Microsoft.Owin;
 using Owin;
+using Blog.Migrations;
+using Blog.Models;
 using System.Data.Entity;
 
 [assembly: OwinStartupAttribute(typeof(Blog.Startup))]
@@ -13,7 +13,6 @@ namespace Blog
         {
             Database.SetInitializer(
                 new MigrateDatabaseToLatestVersion<BlogDbContext, Configuration>());
-
             ConfigureAuth(app);
         }
     }
